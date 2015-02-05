@@ -1,0 +1,33 @@
+
+{%link file="cn/public/header.html"%}
+    
+    <div class="news">
+      <div class="news_1">
+        {%link file="cn/public/location.html"%}
+      </div>
+      <div class="news_2">
+        <div class="news_2_left">
+          <ul>
+		  {%get name=typelist class=tid:$type.tid,utid:$type.topid%}
+					{%forlist from=$array key=i%}
+						<li><img src="{%$rootpath%}images/s_main_26.gif" /><a title="{%$array[i].typename%}" href="{%$array[i].link%}">{%$array[i].typename%}</a></li>
+					{%/forlist%}
+		 {%/get%}
+          </ul>
+        </div>
+        <div class="news_2_right">
+          <div class="nr">
+            <div class="nr_1">{%$read.title%}</div>
+            <div class="nr_2">{%$read.content%}</div>
+          </div>
+          <div class="fanye"></div>
+        </div>
+        
+      </div>
+    </div>
+    <div class="yuanjiao"></div>
+  </div>
+  <div class="c_r"></div>
+  </div>
+</div>
+{%link file="cn/public/footer.html"%}

@@ -1,0 +1,8 @@
+<div class="n_1_left">
+    {%if $type.topid != 0%}
+    {%list name=path class=type:type,id:$type.topid%}
+    {%else%}
+    {%list name=path class=type:type,id:$type.tid%}
+    {%/if%}
+</div>
+<div class="n_1_right">{%$type.typename%}</div>

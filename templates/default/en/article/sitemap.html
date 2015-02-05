@@ -1,0 +1,27 @@
+
+{%link file="cn/public/header.html"%}
+
+<div id="sitemap">
+{%get name=menu class=path:$path,current:$current%}
+
+     {%forlist from=$array key=i%}
+
+              <div class="levelo">
+				<a title="{%$array[i].title%}" href="{%$array[i].link%}">{%$array[i].title%}</a>
+			  </div>
+
+              {%forlist from=$array[i].larray key=ii%}
+
+                    <div class="levelt">
+						 <a class="novlink" href="{%$array[i].larray[ii].link%}" title="{%$array[i].larray[ii].title%}">{%$array[i].larray[ii].title%}</a>
+					</div>
+
+              {%/forlist%} 
+
+     {%/forlist%}
+
+{%/get%}
+
+</div>
+
+{%link file="cn/public/footer.html"%}
